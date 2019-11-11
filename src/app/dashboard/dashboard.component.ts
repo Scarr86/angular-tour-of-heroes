@@ -9,10 +9,18 @@ import { HeroService } from '../hero.service';
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
+  date:string
 
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
+    let options:Intl.DateTimeFormatOptions ={
+      weekday:'narrow',
+      month:'long',
+      year:'2-digit',
+      day:'numeric'
+    }
+    this.date = new Date().toLocaleDateString('ru-Ru', options);
     this.getHeroes();
   }
 
