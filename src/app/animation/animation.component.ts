@@ -50,6 +50,7 @@ import {
 })
 export class AnimationComponent implements OnInit {
   isOpen = true;
+  check = true;
   constructor() {}
   ngOnInit() {}
   toggle() {

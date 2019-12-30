@@ -5,7 +5,11 @@
   <a routerLink="/heroform">Hero Form</a>
   <a routerLink="/dynamic-form">Dynamic Hero Form</a>
   <a routerLink="/animation">Animation</a>
-  
+
 </nav>
-<router-outlet></router-outlet>
+
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <app-messages></app-messages>
