@@ -5,7 +5,7 @@ import { HeroService } from "../hero.service";
 @Component({
   selector: "app-heroes",
   templateUrl: "./heroes.component.html",
-  styleUrls: ["./heroes.component.css"]
+  styleUrls: ["./heroes.component.css"],
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -27,7 +27,9 @@ export class HeroesComponent implements OnInit {
     if (!name) {
       return;
     }
-    this.heroService.addHero({ name } as Hero).subscribe(hero => {
+    let id = 1000;
+    let power ="dfdf"
+    this.heroService.addHero({ id,  name, power } as Hero).subscribe(hero => {
       this.heroes.push(hero);
     });
   }

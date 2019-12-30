@@ -25,6 +25,12 @@
   .grid {
     margin: 0;
   }
+  .grid::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
   .col-1-4 {
     width: 25%;
   }
@@ -60,4 +66,39 @@
     .module {
       min-width: 60px;
     }
+  }
+
+  .head{
+    height: 100px;
+    background-color: #555;
+  }
+  .line{
+    height: 50px;
+    background-color: tomato;
+    position: absolute;
+    width: 100%;
+    right: 2em;
+  }
+
+  .container{
+    height: 300px;
+    background-color: #eee;
+    /* position: relative; */
+    border: 10px solid #fff;
+    border-top: 0px solid #fff;
+  }
+  section{
+    position: relative;
+    /* top: -50px; */
+  }
+  .footer{
+    height: 100px;
+    background-color: #777;
+    position: relative;
+    /* top: -50px; */
+  }
+
+  body{
+    position: relative !important;
+    /* overflow: hidden !important; */
   }
