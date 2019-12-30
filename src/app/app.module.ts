@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"; // <-- NgModel lives here
 
@@ -14,11 +15,13 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
+
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form/dynamic-form.component';
 import { DynamicFormQuestionComponent } from './dynamic-form/dynamic-form-question/dynamic-form-question.component';
 import { DynamicViewComponent } from './dynamic-form/dynamic-view/dynamic-view.component';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +34,12 @@ import { DynamicViewComponent } from './dynamic-form/dynamic-view/dynamic-view.c
     HeroFormComponent,
     DynamicFormComponent,
     DynamicFormQuestionComponent,
-    DynamicViewComponent
+    DynamicViewComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

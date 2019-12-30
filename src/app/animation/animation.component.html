@@ -1,0 +1,12 @@
+<!-- Animate -->
+<button (click)="toggle()">toggle</button>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+
+
+
+<input type="checkbox" [(ngModel)]="check"> Show
+<div @myInsertRemoveTrigger *ngIf="check" class="insert-remove-container">
+  <p>The box is inserted</p>
+</div>
