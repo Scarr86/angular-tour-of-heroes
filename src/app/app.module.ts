@@ -22,6 +22,8 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form/dynamic-form.c
 import { DynamicFormQuestionComponent } from './dynamic-form/dynamic-form-question/dynamic-form-question.component';
 import { DynamicViewComponent } from './dynamic-form/dynamic-view/dynamic-view.component';
 import { AnimationComponent } from './animation/animation.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { AnimationComponent } from './animation/animation.component';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false
-    })
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
