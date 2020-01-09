@@ -1,9 +1,9 @@
 
 
 import {
-    animation, trigger, animateChild, group,
-    transition, animate, style, query
-  } from '@angular/animations';
+  animation, trigger, animateChild, group,
+  transition, animate, style, query
+} from '@angular/animations';
 
 
 export const slideInAnimation =
@@ -19,41 +19,51 @@ export const slideInAnimation =
         })
       ]),
       query(':enter', [
-        style({ left: '-100%'})
+        style({ left: '-100%' })
       ]),
       query(':leave', animateChild()),
       group([
         query(':leave', [
-          animate('300ms ease-out', style({ left: '100%'}))
+          animate('300ms ease-out', style({ left: '100%' }))
         ]),
         query(':enter', [
-          animate('300ms ease-out', style({ left: '0%'}))
+          animate('300ms ease-out', style({ left: '0%' }))
         ])
       ]),
       query(':enter', animateChild()),
     ]),
-    transition('* <=> FilterPage', [
+    // not use
+    // transition('* <=> FilterPage', [
+    //   style({ position: 'relative' }),
+    //   query(':enter, :leave', [
+    //     style({
+    //       position: 'absolute',
+    //       top: 0,
+    //       left: 0,
+    //       width: '100%'
+    //     })
+    //   ]),
+    //   query(':enter', [
+    //     style({ left: '-100%' })
+    //   ]),
+    //   query(':leave', animateChild()),
+    //   group([
+    //     query(':leave', [
+    //       animate('200ms ease-out', style({ left: '100%' }))
+    //     ]),
+    //     query(':enter', [
+    //       animate('300ms ease-out', style({ left: '0%' }))
+    //     ])
+    //   ]),
+    //   query(':enter', animateChild()),
+    // ]),
+    // my anim
+    transition("* <=> *", [
       style({ position: 'relative' }),
-      query(':enter, :leave', [
-        style({
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%'
-        })
-      ]),
-      query(':enter', [
-        style({ left: '-100%'})
-      ]),
-      query(':leave', animateChild()),
-      group([
-        query(':leave', [
-          animate('200ms ease-out', style({ left: '100%'}))
-        ]),
-        query(':enter', [
-          animate('300ms ease-out', style({ left: '0%'}))
-        ])
-      ]),
-      query(':enter', animateChild()),
+      query(':enter, :leave', [style({ position: 'absolute', top: 0, left: 0, width: '100%' })], { optional: true }),
+      query(":enter", [style({ opacity: 0 })], { optional: true }),
+      query(':leave', animate('300ms ease-out', style({ opacity: 0 })), { optional: true }),
+      query(':enter', animate('100ms ease-out', style({ opacity: 1 })), { optional: true }),
+      animate(200, style({ opacity: "*", "background-color": "*", }))
     ])
   ]);

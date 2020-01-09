@@ -12,6 +12,7 @@ import {
   selector: "app-animation",
   animations: [
     trigger("openClose", [
+
       state(
         "open",
         style({
@@ -34,13 +35,14 @@ import {
       // transition("closed <=> open", [animate("0.5s")]),
       // or
       transition("* => closed", [animate("1s")]),
-      transition("* => open", [animate("0.5s")])
+      transition("* => open", [animate("0.5s")]),
+      
     ]),
 
     trigger("myInsertRemoveTrigger", [
       transition(":enter", [
         style({ opacity: 0 }),
-        animate("2s", style({ opacity: 1 }))
+        animate("1s", style({ opacity: 1 }))
       ]),
       transition(":leave", [animate("2s", style({ opacity: 0 }))])
     ])
@@ -50,7 +52,7 @@ import {
 })
 export class AnimationComponent implements OnInit {
   isOpen = true;
-  check = true;
+  checked = true;
   constructor() {}
   ngOnInit() {}
   toggle() {

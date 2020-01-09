@@ -7,7 +7,9 @@ import {
   state,
   style,
   animate,
-  transition
+  transition,
+  query,
+  stagger
   // ...
 } from "@angular/animations";
 
@@ -27,39 +29,26 @@ import {
       ])
     ]),
 
-    trigger("openClose", [
-      state(
-        "open",
-        style({
-          height: "200px",
-          opacity: 1,
-          backgroundColor: "yellow"
-        })
-      ),
-      state(
-        "closed",
-        style({
-          height: "100px",
-          opacity: 0.5,
-          backgroundColor: "green"
-        })
-      ),
-      // transition("open => closed", [animate("1s")]),
-      // transition("closed => open", [animate("0.5s")])
-      // or
-      // transition("closed <=> open", [animate("0.5s")]),
-      // or
-      transition("* => closed", [animate("1s")]),
-      transition("* => open", [animate("0.5s")])
-    ]),
 
-    trigger("myInsertRemoveTrigger", [
-      transition(":enter", [
-        style({ opacity: 0 }),
-        animate("5s", style({ opacity: 1 }))
+
+    trigger('filterAnimation', [
+      transition(':enter, * => 0, * => -1', []),
+      transition(':increment', [
+        query(':enter', [
+          style({ opacity: 0, width: '0px' }),
+          stagger(50, [
+            animate('300ms ease-out', style({ opacity: 1, width: '*' })),
+          ]),
+        ], { optional: true })
       ]),
-      transition(":leave", [animate("5s", style({ opacity: 0 }))])
-    ])
+      transition(':decrement', [
+        query(':leave', [
+          stagger(50, [
+            animate('300ms ease-out', style({ opacity: 0, width: '0px' })),
+          ]),
+        ])
+      ]),
+    ]),
   ]
 })
 export class HeroesComponent implements OnInit {

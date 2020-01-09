@@ -20,13 +20,26 @@ const routes: Routes = [
     component: HeroesComponent,
     data: { animation: "HeroesAnim" }
   },
-  { path: "heroform", component: HeroFormComponent },
-  { path: "dynamic-form", component: DynamicViewComponent },
-  { path: "animation", component: AnimationComponent }
+  {
+    path: "heroform",
+    component: HeroFormComponent,
+    data: { animation: "HeroesAnim1" }
+  },
+  {
+    path: "dynamic-form",
+    component: DynamicViewComponent,
+    data: { animation: "HeroesAnim2" }
+  },
+  {
+    path: "animation",
+    component: AnimationComponent,
+    data: { animation: "HeroesAnim3" }
+    
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
