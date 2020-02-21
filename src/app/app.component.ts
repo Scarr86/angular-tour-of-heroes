@@ -11,7 +11,7 @@ import { slideInAnimation } from './animations';
   ]
 })
 export class AppComponent {
-  title = "Tour of Heroes";
+  title = "Tour of Heroes Bienvenue ";
 
   prepareRoute(outlet: RouterOutlet){
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];

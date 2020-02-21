@@ -1,0 +1,78 @@
+{
+  "configVersion": 1,
+  "timestamp": 1582260926988,
+  "index": "tour-of-herose/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "tour-of-herose/favicon.ico",
+        "tour-of-herose/index.html",
+        "tour-of-herose/main-es2015.d0f2a606eeed199174ce.js",
+        "tour-of-herose/main-es5.c8fa0f43cf7113b4e49a.js",
+        "tour-of-herose/polyfills-es2015.27661dfa98f6332c27dc.js",
+        "tour-of-herose/polyfills-es5.7f43b971448d2fb49202.js",
+        "tour-of-herose/runtime-es2015.858f8dd898b75fe86926.js",
+        "tour-of-herose/runtime-es5.741402d1d47331ce975c.js",
+        "tour-of-herose/styles.7faa2bb7fc59d036275a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "tour-of-herose/assets/icons/icon-128x128.png",
+        "tour-of-herose/assets/icons/icon-144x144.png",
+        "tour-of-herose/assets/icons/icon-152x152.png",
+        "tour-of-herose/assets/icons/icon-192x192.png",
+        "tour-of-herose/assets/icons/icon-384x384.png",
+        "tour-of-herose/assets/icons/icon-512x512.png",
+        "tour-of-herose/assets/icons/icon-72x72.png",
+        "tour-of-herose/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "tour-of-herose/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "tour-of-herose/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "tour-of-herose/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "tour-of-herose/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "tour-of-herose/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "tour-of-herose/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "tour-of-herose/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "tour-of-herose/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "tour-of-herose/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "tour-of-herose/index.html": "669720ca727c7b3421391ce30fdf9411fea588c3",
+    "tour-of-herose/main-es2015.d0f2a606eeed199174ce.js": "72bb4a1f45f66610c9bf7623f1c9f2d0a00b0a85",
+    "tour-of-herose/main-es5.c8fa0f43cf7113b4e49a.js": "0c1a03c6b8ad145750d300fe1ed0a65ef7a40ab9",
+    "tour-of-herose/polyfills-es2015.27661dfa98f6332c27dc.js": "77f974dd2b186031cfc4f4526d96db4efcd39353",
+    "tour-of-herose/polyfills-es5.7f43b971448d2fb49202.js": "f84a71ef6c7a788b5fe701bf2405313d7766a66d",
+    "tour-of-herose/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "tour-of-herose/runtime-es5.741402d1d47331ce975c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "tour-of-herose/styles.7faa2bb7fc59d036275a.css": "81375e584e7b0a5ad53ed0366549947ea125389d"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
